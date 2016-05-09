@@ -12,10 +12,7 @@ public class FrontControllerServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	      // Set response content type
-//	      super.doGet(req, resp);
-		
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
 		  resp.setContentType("text/html");
 		  
 		  String URI = req.getRequestURI();
@@ -33,9 +30,7 @@ public class FrontControllerServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	      String URI = req.getRequestURI();
-//    	  resp.getWriter().write(URI);
 	      if(URI.equals("/MVC_Rungroj/login")){
-//	    	  resp.getWriter().write("Login success");
 	    	  controller = new ProfileController();
 	    	  controller.execute(req, resp);
 	      }     
